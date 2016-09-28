@@ -8,8 +8,6 @@ Fields dominated by embedded and real-time systems (more specifically, high-assu
 
 It does not look like microkernels will become the default in general purpose computers, but more like systems with such reliability requirements will eventually become part of our everyday lives (such as autos, or networked IoT systems where security is very critical).
 
-Another proposal for IoT is to use a unikernel-based system. But in my opinion, that's is a bad choice. Sure, it will be very lightweight, and IoT devices usually do just one task. But they are usually exposed to an unrestricted channel such as the internet. This means that there is chance that a malicious party may exploit a security hole to take over the system just like in monolithic kernel, but even worse! (Since even the code that is normally run in user mode will be running in kernel mode.) But I guess it is perfectly fine to use it in virtualized environments.
-
 ## Non-goals
 
 I’m not too familiar with the problem and solution space other than a bit of exposure to some articles and talks, therefore a rigorous discussion on design/implementation specifics is outside the scope of this talk. I’m just here to claim that their design principles are still relevant today and will be increasingly so in the future (by pointing to ongoing works as indicators).
@@ -24,7 +22,7 @@ We'll discuss the principles behind the microkernel design later, but here just 
 
 ## Mono-kernels
 
-_(blank)_
+Another thing I want to talk about is Unikernels. I read somewhere that a unikernel design is good for IoT devices. But in my opinion, that's is a _very_ bad choice (without virtualization). Sure, it will be very lightweight, and an IoT device is usually meant to do just one task. But most of them are always exposed to an unrestricted communication channel such as the internet. This means that there is chance that a malicious party may exploit a security hole to take over the system just like in monolithic kernel, but even worse! (Since even the code that is normally run in user mode will be running in kernel mode.) But I guess it is perfectly fine to use it in virtualized environments.
 
 ## Microkernels
 
