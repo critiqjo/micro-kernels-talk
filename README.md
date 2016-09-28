@@ -10,11 +10,11 @@ Linux performance over security (old example): vsyscall vs vdso (fixed in 2.6): 
 
 ## Non-goals
 
-I’m just here to claim that their design principles are still relevant today and will be increasingly so in the future (by pointing to ongoing works as indicators).
+I’m not too familiar with the problem and solution space other than a bit of exposure to some articles and talks, therefore a rigorous discussion on design/implementation specifics is outside the scope of this talk. I’m just here to claim that their design principles are still relevant today and will be increasingly so in the future (by pointing to ongoing works as indicators).
 
 ## Outline
 
-Disclaimer: I’m not too familiar with the problem and solution space other than a bit of exposure to some articles and talks, therefore a rigorous discussion on it is outside the scope of this talk. So instead of having a discussion with me, I want to point you to some of the latest and most interesting projects and resources, which you can dig deep yourselves.
+_(blank)_
 
 ## Architecture Overview
 
@@ -26,7 +26,7 @@ _(blank)_
 
 ## Microkernels
 
-**Mechanism**: Mu-kernel typically provides basic IPC, address space management mechanisms, hardware endpoint management, and process management and scheduling. But who gets access to which part of address space or device endpoint is managed by **policies** implemented on top of it.
+**Mechanism**: μ-kernel typically provides basic IPC, address space management mechanisms, hardware endpoint management, and process management and scheduling. But who gets access to which part of address space or device endpoint is managed by **policies** implemented on top of it.
 
 E.g. Memory management (va -> pa mapping, what to do if memory is almost full etc.) can be done in by a user-mode server, (but still page tables (faults) should be handled by kernel)... A “path” in Linux may map to a file, a network socket etc. which is a policy. Reading data from disk is an underlying mechanism, done by the VFS through drivers.
 
