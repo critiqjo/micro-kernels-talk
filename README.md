@@ -24,7 +24,7 @@ Another thing I want to talk about is Unikernels. I read somewhere that a uniker
 
 **Mechanism**: μ-kernel typically provides basic IPC, address space management mechanisms, hardware endpoint management, and process management and scheduling. But who gets access to which part of address space or device endpoint is managed by **policies** implemented on top of it.
 
-E.g. Memory management (va -> pa mapping, what to do if memory is almost full etc.) can be done in by a user-mode server, (but still page tables (faults) should be handled by kernel)... A “path” in Linux may map to a file, a network socket etc. which is a policy. Reading data from disk is an underlying mechanism, done by the VFS through drivers.
+E.g. A “path” in Linux may map to a file, a network socket etc. which is a policy. Reading data from disk is an underlying mechanism, done by the VFS through drivers.
 
 **Fault isolation**: a lousy graphics driver can no longer take down the entire system or be an attack surface for a malware trying to take over the entire system. (fault recovery: restarting a crashed driver, but that alone won’t guarantee a safe recovery, which would need checkpointing)
 
