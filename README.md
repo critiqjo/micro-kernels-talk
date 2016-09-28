@@ -44,6 +44,10 @@ E.g. A “path” in Linux may map to a file, a network socket etc. which is a p
 
 **Large pages**: This reduces the number of entries needed per unit of memory
 
+--
+
+Now we'll look at a few interesting projects in the order of increasing interest! The least interesting first...
+
 ## Kid \#1: L4Linux/L4Re
 L4 is a family of second-gen microkernels; originally a microkernel designed and implemented by Jochen Liedtke as a response to the poor performance of earlier microkernel-based operating systems.
 
