@@ -67,7 +67,7 @@ Capability-based security: where the entity requesting a service holds an unforg
 
 Another microkernel which claims to be “first ever” formally verified: Muen Separation Kernel (https://muen.sk/) (also targeting high-assurance systems; eg. aircraft controllers)
 
-## Kid \#4: seL4
+### Design
 
 Specifically designed with formal verification in mind. For more information, see [2.b]
 
@@ -76,11 +76,3 @@ Specifically designed with formal verification in mind. For more information, se
 Development started last June (according to the repo history).
 
 IoT devices exposed to open network and running critical software such as, say, auto-driving program need very high security guarantees.
-
-## Closing thoughts
-
-_(blank)_
-
-## Thank you!
-
-The actual author of that quote is disputed! The oldest known evidence goes to Clare Booth Luce (http://quoteinvestigator.com/2015/04/02/simple/)
