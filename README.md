@@ -51,7 +51,9 @@ Still active Linux 4.x versions have been released recently, but couldn’t find
 
 ## Kid \#2: Genode
 
-Quotas: resource trading for deterministic behavior
+It's like parent process and children, but the parent is responsible for all resource usage by children.
+
+Quotas: resource trading for deterministic behavior.
 
 ## Kid \#3: HelenOS
 
