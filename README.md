@@ -57,6 +57,8 @@ Quotas: resource trading for deterministic behavior.
 
 ## Kid \#3: HelenOS
 
+High-level abstractions like Promises/Futures/Async-Await etc.
+
 The design docs is kinda outdated (v0.2 vs current v0.6), but most ideas are probably still valid.
 
 Principles: Microkernel principle, Split of mechanism and policy, Multiserver principle, Full-fledged principle, Encapsulation principle, Portability principle
