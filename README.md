@@ -28,8 +28,6 @@ E.g. A “path” in Linux may map to a file, a network socket etc. which is a p
 
 **Fault isolation**: a lousy graphics driver can no longer take down the entire system or be an attack surface for a malware trying to take over the entire system. (fault recovery: restarting a crashed driver, but that alone won’t guarantee a safe recovery, which would need checkpointing)
 
-**Extensibility**: Components can be updated in isolation (e.g. upgrade or add a new feature to VFS or MemMngr without recompiling the whole kernel)
-
 **Responsiveness**: Since much more code is running in pre-emptible userspace, say, a blocking driver will not affect the system responsiveness. Better suited for real-time systems which might need (response) time-bound guarantees.
 
 **EoC**: Defining clear boundaries between different parts of the system and limiting unwanted and unnecessary interaction (when everything is in one big blob, people tend to do dirty hacks to get things done faster which could become a maintenance pain)
