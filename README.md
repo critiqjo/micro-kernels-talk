@@ -30,7 +30,7 @@ E.g. A “path” in Linux may map to a file, a network socket etc. which is a p
 
 **Responsiveness**: Since much more code is running in pre-emptible userspace, say, a blocking driver will not affect the system responsiveness. Better suited for real-time systems which might need (response) time-bound guarantees.
 
-**EoC**: Defining clear boundaries between different parts of the system and limiting unwanted and unnecessary interaction (when everything is in one big blob, people tend to do dirty hacks to get things done faster which could become a maintenance pain)
+**EoC**: Define (or enforce) clear boundaries between different parts of the system, which makes reasoning about the behavior much easier. This is very necessary for formal verification purposes, because exhaustive enumeration of all interactions of a small/simple component is much easier than doing that for a large/complex component. It also prevents unintended interaction (when everything is in one big blob, people tend to do dirty hacks to get things done faster which could become a maintenance pain)
 
 **Context switches** are fine as long as cache misses are little affected. Note: disk access through IPC does not mean data is transferred through IPC. Bulk data is always transferred through shared pages (at least in well-designed ones).
 
