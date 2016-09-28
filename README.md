@@ -8,13 +8,9 @@ Fields dominated by embedded and real-time systems (more specifically, high-assu
 
 It does not look like microkernels will become the default in general purpose computers, but more like systems with such reliability requirements will eventually become part of our everyday lives (such as autos, or networked IoT systems where security is very critical).
 
-## Non-goals
-
-I’m not too familiar with the problem and solution space other than a bit of exposure to some articles and talks, therefore a rigorous discussion on design/implementation specifics is outside the scope of this talk. I’m just here to claim that their design principles are still relevant today and will be increasingly so in the future (by pointing to ongoing works as indicators).
-
 ## Outline
 
-_(blank)_
+_Disclaimer:_ I’m not too familiar with the problem and solution space other than a bit of exposure to some articles and talks, therefore a rigorous discussion on design/implementation specifics is outside the scope of this talk. I’m just here to claim that their design principles are still relevant today and will be increasingly so in the future (by pointing to ongoing works as indicators).
 
 ## Architecture Overview
 
