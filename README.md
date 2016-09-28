@@ -22,33 +22,33 @@ We'll discuss the principles behind the microkernel design later, but here just 
 
 ## Mono-kernels
 
--
+_(blank)_
 
 ## Microkernels
 
-Mu-kernel typically provides basic IPC, address space management mechanisms, hardware endpoint management, and process management and scheduling. But who gets access to which part of address space or device endpoint is managed by policies implemented on top of it.
+**Mechanism**: Mu-kernel typically provides basic IPC, address space management mechanisms, hardware endpoint management, and process management and scheduling. But who gets access to which part of address space or device endpoint is managed by **policies** implemented on top of it.
 
-E.g. Memory management can be done in user level by a server, but page tables should be handled by kernel... A “path” in Linux may map to a file, a network socket etc. which is a policy. Reading data from disk is an underlying mechanism, done by the VFS through drivers.
+E.g. Memory management (va -> pa mapping, what to do if memory is almost full etc.) can be done in by a user-mode server, (but still page tables (faults) should be handled by kernel)... A “path” in Linux may map to a file, a network socket etc. which is a policy. Reading data from disk is an underlying mechanism, done by the VFS through drivers.
 
-Fault isolation: a lousy graphics driver can no longer take down the entire system or be an attack surface for a malware trying to take over the entire system. (fault recovery: restarting a crashed driver, but that alone won’t guarantee a safe recovery, which would need checkpointing)
+**Fault isolation**: a lousy graphics driver can no longer take down the entire system or be an attack surface for a malware trying to take over the entire system. (fault recovery: restarting a crashed driver, but that alone won’t guarantee a safe recovery, which would need checkpointing)
 
-Extensibility: Components can be updated in isolation (e.g. upgrade or add a new feature to VFS or MemMngr without recompiling the whole kernel)
+**Extensibility**: Components can be updated in isolation (e.g. upgrade or add a new feature to VFS or MemMngr without recompiling the whole kernel)
 
-Responsiveness: Since much more code is running in pre-emptible userspace, say, a blocking driver will not affect the system responsiveness. Better suited for real-time systems which might need (response) time-bound guarantees.
+**Responsiveness**: Since much more code is running in pre-emptible userspace, say, a blocking driver will not affect the system responsiveness. Better suited for real-time systems which might need (response) time-bound guarantees.
 
-EoC: Defining clear boundaries between different parts of the system and limiting unwanted and unnecessary interaction (when everything is in one big blob, people tend to do dirty hacks to get things done faster which could become a maintenance pain)
+**EoC**: Defining clear boundaries between different parts of the system and limiting unwanted and unnecessary interaction (when everything is in one big blob, people tend to do dirty hacks to get things done faster which could become a maintenance pain)
 
-Context switches are fine as long as cache misses are little affected. Note: disk access through IPC does not mean data is transferred through IPC. Bulk data is always transferred through shared pages (at least in well-designed ones).
+**Context switches** are fine as long as cache misses are little affected. Note: disk access through IPC does not mean data is transferred through IPC. Bulk data is always transferred through shared pages (at least in well-designed ones).
 
 ## Context Switches
 
-The costs: Aside from TLB flushing being an expensive operation, the va->pa translations takes more cycles
+**The costs**: Aside from TLB flushing being an expensive operation, the va->pa translations takes more cycles
 
-Tagged TLB entries: Translations can be tagged with a “process id” so that instead of flushing the TLB, simply consider an entry valid if the ids match
+**Tagged TLB entries**: Translations can be tagged with a “process id” so that instead of flushing the TLB, simply consider an entry valid if the ids match
 
-Global pages: Entries can be marked as “global” for kernel pages so that they are not flushed at all
+**Global pages**: Entries can be marked as “global” for kernel pages so that they are not flushed at all
 
-Large pages: This reduces the number of entries needed per unit of memory
+**Large pages**: This reduces the number of entries needed per unit of memory
 
 ## Kid \#1: L4Linux/L4Re
 L4 is a family of second-gen microkernels; originally a microkernel designed and implemented by Jochen Liedtke as a response to the poor performance of earlier microkernel-based operating systems.
@@ -83,7 +83,7 @@ IoT devices exposed to open network and running critical software such as, say, 
 
 ## Closing thoughts
 
--
+_(blank)_
 
 ## Thank you!
 
