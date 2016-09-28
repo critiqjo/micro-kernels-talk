@@ -1,12 +1,14 @@
 # Return of the Microkernels
 
+Whatsup with the name? A prophecy! I'm prophecying that the number of devices running microkernel based architecture will become comparable with those running monolithic kernel architecture, in say 25 years (a random number without any scientific basis), and consequently (hoplefully) the number of developers working on such systems. Though I don't think that Linux will experience a significant decrease in deployment in servers/desktops/laptops even in that timeframe simply due the sheer number of people working on it (which means more innovation).
+
 ## Motivation
 
 Fields dominated by embedded and real-time systems (more specifically, high-assurance systems) such as avionics, medical and military systems, etc. where the reliability requirement is so high that “a failure could mean somebody dying,” primarily use microkernels.
 
 It does not look like microkernels will become the default in general purpose computers, but more like systems with such reliability requirements will eventually become part of our everyday lives (such as autos, or networked IoT systems where security is very critical).
 
-Linux performance over security (old example): vsyscall vs vdso (fixed in 2.6): http://stackoverflow.com/a/19942352/2849934
+Another proposal for IoT is to use a unikernel-based system. But in my opinion, that's is a bad choice. Sure, it will be very lightweight, and IoT devices usually do just one task. But they are usually exposed to an unrestricted channel such as the internet. This means that there is chance that a malicious party may exploit a security hole to take over the system just like in monolithic kernel, but even worse! (Since even the code that is normally run in user mode will be running in kernel mode.) But I guess it is perfectly fine to use it in virtualized environments.
 
 ## Non-goals
 
