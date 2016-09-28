@@ -1,6 +1,6 @@
 # Return of the Microkernels
 
-Whatsup with the name? A prophecy! I'm prophecying that the number of devices running microkernel based architecture will become comparable with those running monolithic kernel architecture, in say 25 years (a random number without any scientific basis), and consequently (hoplefully) the number of developers working on such systems. Though I don't think that Linux will experience a significant decrease in deployment in servers/desktops/laptops even in that timeframe simply due the sheer number of people working on it (which means more innovation).
+Whatsup with the name? Kinda like a prophecy! I'm prophesying that microkernel based architecture will become much popular in the coming years. And I'm here to discuss some of the reasons that I found that will pave the way for their (glorious) return. Though I don't think that Linux will experience a significant decrease in deployment in servers/desktops/laptops even in that timeframe simply due the sheer number of people working on it (which means more innovation).
 
 ## Motivation
 
